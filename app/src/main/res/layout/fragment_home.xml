@@ -1,17 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Home">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/start_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="164dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="164dp"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <Button
+            android:id="@+id/news"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:foreground="?attr/selectableItemBackground"
 
+            android:layout_width="359dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="39dp"
+            android:layout_marginEnd="26dp"
+            android:lineHeight="28sp"
+            android:text="Новини"
+            android:fontFamily="Roboto"
+            android:textColor="#FF6B00"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <Button
+            android:id="@+id/specialties"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="359dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="26dp"
+            android:lineHeight="28sp"
+            android:fontFamily="Roboto"
+            android:text="Спеціальності"
+            android:textColor="#FF6B00"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/news" />
+
+        <Button
+            android:id="@+id/courses"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="359dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="26dp"
+            android:text="Підготовчі курси"
+            android:fontFamily="Roboto"
+            android:lineHeight="28sp"
+            android:textColor="#FF6B00"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/specialties" />
+
+        <Button
+            android:id="@+id/intro"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="359dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="26dp"
+            android:fontFamily="Roboto"
+            android:lineHeight="28sp"
+            android:text="Вступна компанія"
+            android:textColor="#FF6B00"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/courses" />
+
+        <Button
+            android:id="@+id/about"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="359dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="26dp"
+            android:fontFamily="Roboto"
+            android:lineHeight="28sp"
+            android:text="Про коледж"
+            android:textColor="#FF6B00"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/intro" />
+
+        <Button
+            android:id="@+id/buy"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="359dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="26dp"
+            android:text="Купити курсову / практичні"
+            android:fontFamily="Roboto"
+            android:lineHeight="28sp"
+            android:textColor="#FF6B00"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/about" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
