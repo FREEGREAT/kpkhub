@@ -5,11 +5,9 @@
     android:layout_height="match_parent"
     tools:context=".VirtualLink">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Virual Link"
-        android:textSize="26dp"
-        android:layout_gravity="center"/>
+    <WebView
+        android:id="@+id/wb_webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </FrameLayout>

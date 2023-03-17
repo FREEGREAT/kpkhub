@@ -14,7 +14,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="164dp"
@@ -28,20 +28,19 @@
         <Button
             android:id="@+id/news"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:foreground="?attr/selectableItemBackground"
-
             android:layout_width="359dp"
             android:layout_height="60dp"
             android:layout_marginStart="26dp"
             android:layout_marginTop="39dp"
             android:layout_marginEnd="26dp"
+            android:fontFamily="Roboto"
+            android:foreground="?attr/selectableItemBackground"
             android:lineHeight="28sp"
             android:text="Новини"
-            android:fontFamily="Roboto"
             android:textColor="#FF6B00"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+            app:layout_constraintTop_toBottomOf="@+id/logo" />
 
         <Button
             android:id="@+id/specialties"
@@ -51,13 +50,14 @@
             android:layout_marginStart="26dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="26dp"
-            android:lineHeight="28sp"
             android:fontFamily="Roboto"
+            android:lineHeight="28sp"
             android:text="Спеціальності"
             android:textColor="#FF6B00"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/news" />
+            app:layout_constraintTop_toBottomOf="@+id/news"
+            />
 
         <Button
             android:id="@+id/courses"
@@ -67,9 +67,9 @@
             android:layout_marginStart="26dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="26dp"
-            android:text="Підготовчі курси"
             android:fontFamily="Roboto"
             android:lineHeight="28sp"
+            android:text="Підготовчі курси"
             android:textColor="#FF6B00"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -118,9 +118,9 @@
             android:layout_marginStart="26dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="26dp"
-            android:text="Купити курсову / практичні"
             android:fontFamily="Roboto"
             android:lineHeight="28sp"
+            android:text="Купити курсову / практичні"
             android:textColor="#FF6B00"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"

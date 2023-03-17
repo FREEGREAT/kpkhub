@@ -1,4 +1,11 @@
 package com.example.kpkhub
 
-class SpecialtyActivity {
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+
+class SpecialtyActivity : AppCompatActivity(){
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_specialty)
+    }
 }
