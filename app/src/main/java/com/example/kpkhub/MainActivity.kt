@@ -18,20 +18,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
-
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
-                R.id.home -> replaceFragment(Home()){
-                    val specialty: Button = findViewById(R.id.specialties)
-                    specialty.setOnClickListener{
-                        val intent = Intent(this, SpecialtyActivity::class.java)
-                        startActivity(intent)
-                    }
-                }
+                R.id.home -> replaceFragment(Home()){}
                 R.id.virtualLink -> replaceFragment(VirtualLink()){}
                 R.id.shedule -> replaceFragment(Shedule()) {}
                 else ->{

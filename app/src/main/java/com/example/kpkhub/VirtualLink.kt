@@ -1,15 +1,15 @@
 package com.example.kpkhub
 
-import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.annotation.RequiresApi
+import androidx.fragment.app.Fragment
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -30,10 +30,6 @@ class VirtualLink : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-//        val webView: WebView = findViewById(R.id.wb_webView)
-//        webView.webViewClient = WebViewClient()
-//        webView.loadUrl("https://www.example.com")
-
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
@@ -44,8 +40,28 @@ class VirtualLink : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_virtual_link, container, false)
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val webView: WebView? = view?.findViewById(R.id.wb_webView)
+        webView?.settings?.javaScriptEnabled = true
+        webView?.settings?.allowContentAccess = true
+        webView?.settings?.domStorageEnabled = true
+        webView?.settings?.useWideViewPort = true
+        webView?.webViewClient = object : WebViewClient() {
+            @Deprecated("Deprecated in Java")
+            override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
+                if (url != null) {
+                    view?.loadUrl(url)
+                }
+                return true
+            }
+        }
+        webView?.setWebViewClient(
+            SSLTolerentWebViewClient()
+        )
+        webView?.loadUrl("https://dn.khnu.km.ua/kpk/default.aspx")
     }
 
     companion object {
