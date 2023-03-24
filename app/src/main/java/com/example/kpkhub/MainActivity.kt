@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity() {
 
                 }
             }
-
             true
         }
         binding.bottomNavigationView.selectedItemId = R.id.home

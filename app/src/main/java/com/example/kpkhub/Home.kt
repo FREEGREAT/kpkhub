@@ -1,20 +1,22 @@
 package com.example.kpkhub
 
-import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.webkit.WebView
-import android.webkit.WebViewClient
-import android.widget.Button
-import androidx.databinding.DataBindingUtil.setContentView
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.LayoutManager as RecyclerViewLayoutManager
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
+
+
 
 /**
  * A simple [Fragment] subclass.
@@ -26,8 +28,14 @@ class Home : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private  lateinit var btnRecyclerView: RecyclerView
+    private  lateinit var btnArrayList: ArrayList<Btn>
+    lateinit var btnName: Array<String>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
@@ -37,19 +45,15 @@ class Home : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
+
+
+
     ): View? {
         return inflater.inflate(R.layout.fragment_home, container, false)
 
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        val specialty: Button? = view?.findViewById(R.id.specialties)
-        specialty?.setOnClickListener{
-            val intent = Intent(requireActivity(), SpecialtyActivity::class.java)
-            startActivity(intent)
-        }
-    }
+
 
     companion object {
         /**
@@ -70,4 +74,52 @@ class Home : Fragment() {
                 }
             }
     }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
+        btnName = arrayOf(
+            "Новини",
+            "About",
+            "buy",
+            "speciality",
+            "Shedule"
+        )
+
+        btnRecyclerView = view.findViewById(R.id.rcBTN)
+        btnRecyclerView.layoutManager = LinearLayoutManager(context)
+        btnRecyclerView.setHasFixedSize(true)
+
+        btnArrayList = arrayListOf<Btn>()
+        getBtndata()
+
+    }
+
+    private  fun getBtndata(){
+        for (i in btnName.indices){
+
+            val btn = Btn(btnName[i])
+            btnArrayList.add(btn)
+        }
+        var adapter = MyAdapter(btnArrayList)
+        btnRecyclerView.adapter = adapter
+
+        adapter.setBtnClickListener(object : MyAdapter.onBtnClickListener{
+            override fun onBtnClick(position: Int) {
+                when (position){
+                    0->{
+
+                    }
+                }
+            }
+
+        } )
+
+    }
+
+
+
+
 }

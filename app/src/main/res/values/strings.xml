@@ -2,4 +2,12 @@
     <string name="app_name">KPKhub</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string  name="news">Новини</string>
+    <string  name="speciality">Спеціальності</string>
+    <string name="courses">Підготовчі курси</string>
+    <string name="campain">Вступна компанія</string>
+    <string  name="about">Про коледж</string>
+    <string  name="buy">Купити курсову/практичні</string>
+
 </resources>

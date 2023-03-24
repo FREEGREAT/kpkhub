@@ -1,3 +1,5 @@
 package com.example.kpkhub
 
-data class Btn()
+
+data class Btn(var Name: String)
+
