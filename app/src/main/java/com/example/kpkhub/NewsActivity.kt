@@ -1,4 +1,7 @@
 package com.example.kpkhub
 
-class NewsActivity {
+import androidx.appcompat.app.AppCompatActivity
+
+class NewsActivity : AppCompatActivity() {
+
 }

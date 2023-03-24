@@ -1,5 +1,6 @@
 package com.example.kpkhub
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -81,11 +82,12 @@ class Home : Fragment() {
 
 
         btnName = arrayOf(
-            "Новини",
-            "About",
-            "buy",
-            "speciality",
-            "Shedule"
+            getString(R.string.news),
+            getString(R.string.speciality),
+            getString(R.string.courses),
+            getString(R.string.campain),
+            getString(R.string.about),
+            getString(R.string.buy),
         )
 
         btnRecyclerView = view.findViewById(R.id.rcBTN)
@@ -110,7 +112,28 @@ class Home : Fragment() {
             override fun onBtnClick(position: Int) {
                 when (position){
                     0->{
-
+                        val intent = Intent(requireActivity(), NewsActivity::class.java)
+                        startActivity(intent)
+                    }
+                    1->{
+                        val intent = Intent(requireActivity(), SpecialtyActivity::class.java)
+                        startActivity(intent)
+                    }
+                    2->{
+                        val intent = Intent(requireActivity(), KursyActivity::class.java)
+                        startActivity(intent)
+                    }
+                    3->{
+                        val intent = Intent(requireActivity(), KompanyActivity::class.java)
+                        startActivity(intent)
+                    }
+                    4->{
+                        val intent = Intent(requireActivity(), AboutActivity::class.java)
+                        startActivity(intent)
+                    }
+                    5->{
+                        val intent = Intent(requireActivity(), BuyActivity::class.java)
+                        startActivity(intent)
                     }
                 }
             }

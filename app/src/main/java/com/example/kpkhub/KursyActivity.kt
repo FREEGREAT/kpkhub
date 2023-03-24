@@ -1,4 +1,6 @@
 package com.example.kpkhub
 
-class KursyActivity {
+import androidx.appcompat.app.AppCompatActivity
+
+class KursyActivity : AppCompatActivity() {
 }

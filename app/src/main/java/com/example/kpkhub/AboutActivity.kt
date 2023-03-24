@@ -1,4 +1,6 @@
 package com.example.kpkhub
 
-class AboutActivity {
+import androidx.appcompat.app.AppCompatActivity
+
+class AboutActivity : AppCompatActivity() {
 }
