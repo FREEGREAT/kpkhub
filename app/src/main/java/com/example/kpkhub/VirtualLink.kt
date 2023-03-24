@@ -49,6 +49,7 @@ class VirtualLink : Fragment() {
         webView?.settings?.allowContentAccess = true
         webView?.settings?.domStorageEnabled = true
         webView?.settings?.useWideViewPort = true
+        webView?.settings?.loadWithOverviewMode = true
         webView?.webViewClient = object : WebViewClient() {
             @Deprecated("Deprecated in Java")
             override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
