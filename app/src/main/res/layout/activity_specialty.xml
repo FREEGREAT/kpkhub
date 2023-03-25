@@ -5,19 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SpecialtyActivity">
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/baseline_keyboard_double_arrow_left_24"
+        android:backgroundTint="#1C1B1F"
+        tools:ignore="MissingConstraints"
+        />
     <LinearLayout
         android:id="@+id/indicatorsContainer"
         android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/introSliderViewPager"
         android:orientation="horizontal"
-        tools:ignore="MissingConstraints" >
+        tools:ignore="MissingConstraints" />
 
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/introSliderViewPager"
-            android:layout_width="match_parent"
-            android:layout_height="600dp"
-            android:overScrollMode="never" />
-    </LinearLayout>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/introSliderViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toTopOf="@id/indicatorsContainer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -76,10 +77,32 @@ class Home : Fragment() {
             }
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+//        Image click
+//        val imageView = view.findViewById<ImageView>(R.id.logo)
+//        var clickCount = 0
+//        var lastClickTime = 0L
+//
+//        imageView.setOnClickListener{
+//            val now = System.currentTimeMillis()
+//            val elapsedTime = now - lastClickTime
+//
+//            if(elapsedTime <= 1000){
+//                clickCount++
+//                if (clickCount == 3){
+//                    val intent = Intent(this, BuyActivity::class.java)
+//                    startActivity(intent)
+//
+//                    clickCount = 0
+//                    lastClickTime = 0
+//                }
+//            }else{
+//                clickCount = 1
+//                lastClickTime = now
+//            }
+//        }
 
         btnName = arrayOf(
             getString(R.string.news),

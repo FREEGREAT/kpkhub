@@ -3,6 +3,7 @@ package com.example.kpkhub
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kotlin.coroutines.coroutineContext
@@ -28,12 +29,12 @@ class IntroSliderAdapter(private val introSlides: List<IntroSlider>) : RecyclerV
     }
 
     inner class IntroSlideViewHolder(view: View) : RecyclerView.ViewHolder(view){
-        private val textNumber = view.findViewById<TextView>(R.id.numberCard)
+        private val icon = view.findViewById<ImageView>(R.id.imageSlideIcon)
         private val textTitle = view.findViewById<TextView>(R.id.titleCard)
         private val textDescription = view.findViewById<TextView>(R.id.descCard)
 
         fun bind(introSlide: IntroSlider){
-            textNumber.text = introSlide.number
+            icon.setImageResource(introSlide.icon)
             textTitle.text = introSlide.title
             textDescription.text = introSlide.desc
         }
