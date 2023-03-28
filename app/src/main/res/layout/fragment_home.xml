@@ -28,67 +28,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        />
 
-    <!--    <Button-->
-<!--        android:id="@+id/news"-->
-<!--        style="@style/Button"-->
-<!--        android:text="Новини"-->
-<!--        android:textColor="#FF6B00"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.6"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/logo" />-->
-
-<!--    <Button-->
-<!--            android:id="@+id/specialties"-->
-<!--            style="@style/Button"-->
-<!--            android:text="Спеціальності"-->
-<!--            android:textColor="#FF6B00"-->
-<!--            android:layout_marginTop="20dp"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/news"-->
-<!--            />-->
-
-<!--        <Button-->
-<!--            android:id="@+id/courses"-->
-<!--            style="@style/Button"-->
-<!--            android:text="Підготовчі курси"-->
-<!--            android:textColor="#FF6B00"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.0"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/specialties" />-->
-
-<!--        <Button-->
-<!--            android:id="@+id/intro"-->
-<!--            style="@style/Button"-->
-<!--            android:text="Вступна компанія"-->
-<!--            android:textColor="#FF6B00"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.0"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/courses" />-->
-
-<!--        <Button-->
-<!--            android:id="@+id/about"-->
-<!--            style="@style/Button"-->
-<!--            android:text="Про коледж"-->
-<!--            android:textColor="#FF6B00"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.0"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/intro" />-->
-
-<!--        <Button-->
-<!--            android:id="@+id/buy"-->
-<!--            style="@style/Button"-->
-<!--            android:text="Купити курсову / практичні"-->
-<!--            android:textColor="#FF6B00"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.0"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/about" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
