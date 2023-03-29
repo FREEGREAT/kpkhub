@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".KursyActivity">
+
+    <Button
+        android:id="@+id/exitKursy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/baseline_keyboard_double_arrow_left_24"
+        android:backgroundTint="#1C1B1F"
+        tools:ignore="MissingConstraints"
+        />
+    <TextView
+        android:id="@+id/kursyTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Підготовчі курси 2023"
+        android:textSize="40sp"
+        tools:ignore="MissingConstraints"
+        android:gravity="right"
+        android:layout_marginLeft="58dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="20dp"
+        tools:layout_editor_absoluteY="60dp" />
+
+    <TextView
+        android:id="@+id/kursyDesc"
+        app:layout_constraintTop_toBottomOf="@id/kursyTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Для реєстрації пройдіть за посиланням нижче!"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center_vertical"
+        android:textSize="25sp"
+        tools:ignore="InvalidId,MissingConstraints" />
+    <ImageView
+        android:id="@+id/kursyImg"
+        app:layout_constraintTop_toBottomOf="@id/kursyDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/kursykpfk"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/signInKursy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundstyle"
+        app:layout_constraintTop_toBottomOf="@id/kursyImg"
+        android:layout_marginRight="125dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="60dp"
+        android:text="Реєстрація"
+        android:backgroundTint="#FF6B00"
+        android:textColor="#ffffff"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
