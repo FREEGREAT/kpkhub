@@ -16,8 +16,8 @@ class KursyActivity : AppCompatActivity() {
         exit.setOnClickListener {
             finish()
         }
-        val openSignInKursy = findViewById<Button>(R.id.signInKursy)
-        openSignInKursy.setOnClickListener {
+        val openSignIn = findViewById<Button>(R.id.signInKursy)
+        openSignIn.setOnClickListener {
             val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)
         }

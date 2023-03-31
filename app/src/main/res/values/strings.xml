@@ -3,12 +3,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string  name="news">Новини</string>
-    <string  name="speciality">Спеціальності</string>
+    <string name="news">Новини</string>
+    <string name="speciality">Спеціальності</string>
     <string name="courses">Підготовчі курси</string>
     <string name="campain">Вступна компанія</string>
-    <string  name="about">Про коледж</string>
-    <string  name="buy">Купити курсову/практичні</string>
+    <string name="about">Про коледж</string>
+    <string name="buy">Купити курсову/практичні</string>
     <!--News Title-->
     <string name="nTitle1">Вітаємо Кайдакова Владислава студента академічної групи М-11 із
         зайнятим І - им місцем у ЧЕМПІОНАТІ УКРАЇНИ</string>
@@ -45,7 +45,15 @@
     <string name="nDate6">м. Коломия, 10 грудня 2022 року – 19 лютого 2023 року</string>
     <string name="nDate7">08 грудня 2022 р. </string>
     <string name="nDate8">м. Київ 25 - 27 листопада 2022 р.</string>
+    <string name="title_activity_bells">BellsActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
 
 </resources>

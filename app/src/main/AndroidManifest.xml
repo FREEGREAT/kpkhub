@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +15,14 @@
         android:theme="@style/Theme.KPKhub"
         tools:targetApi="31">
         <activity
+            android:name=".BellsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_bells"
+            android:theme="@style/Theme.KPKhub.NoActionBar" />
+        <activity
+            android:name=".LessonsActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -20,13 +31,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SpecialtyActivity"></activity>
-        <activity android:name=".NewsActivity"></activity>
-        <activity android:name=".AboutActivity"></activity>
-        <activity android:name=".KompanyActivity"></activity>
-        <activity android:name=".KursyActivity"></activity>
-        <activity android:name=".BuyActivity"></activity>
+        <activity android:name=".SpecialtyActivity" />
+        <activity android:name=".NewsActivity" />
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".KompanyActivity" />
+        <activity android:name=".KursyActivity" />
+        <activity android:name=".BuyActivity" />
+        <activity android:name=".SignInActivity" />
     </application>
-<uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
 </manifest>

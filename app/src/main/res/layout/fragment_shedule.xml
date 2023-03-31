@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background='#121212'
     tools:context=".Shedule">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
+    
+    <Button
+        android:id="@+id/lesson"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Shedule"
-        android:textSize="26dp"
-        android:layout_gravity="center"/>
-
-</FrameLayout>
+        android:text="Занять"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_marginBottom="-10dp"
+        android:layout_marginTop="-10dp"
+        />
+    <Button
+        android:id="@+id/bells"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Дзвінків"
+        android:layout_marginTop="10dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        />
+</LinearLayout>
