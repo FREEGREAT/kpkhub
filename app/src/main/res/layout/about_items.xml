@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:orientation="vertical"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
-
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/aboutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Про коледж"
+        android:textSize="40sp"/>
+    <TextView
+        android:id="@+id/aboutDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Коломийський"
+        android:layout_marginTop="38dp"
+        />
+    <TextView
+        android:id="@+id/titleHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Наша Історія"
+        android:background="#FF6B00"
+        android:textColor="#1C1B1F"
+        android:textSize="28sp"
+        android:layout_marginTop="38dp"/>
+    <TextView
+        android:id="@+id/historyCollage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Коломийський політехнічний фаховий коледж..."
+        android:layout_marginTop="18dp"
+        android:textSize="15dp"/>
 </LinearLayout>

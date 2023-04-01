@@ -1,4 +1,3 @@
 package com.example.kpkhub
 
-class About {
-}
+data class About (var Title: String, var date: String, var TitleHistory: String, var History: String,)

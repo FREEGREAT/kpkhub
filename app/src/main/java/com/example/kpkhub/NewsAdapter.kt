@@ -3,12 +3,11 @@ package com.example.kpkhub
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class NewsAdapter (private val newsList: ArrayList<News>) : RecyclerView.Adapter<NewsAdapter.NewsHolder>(){
+class NewsAdapter(private val newsList: ArrayList<News>) : RecyclerView.Adapter<NewsAdapter.NewsHolder>(){
 
 
 
@@ -21,8 +20,8 @@ class NewsAdapter (private val newsList: ArrayList<News>) : RecyclerView.Adapter
     override fun onBindViewHolder(holder: NewsAdapter.NewsHolder, position: Int) {
         val currentNews = newsList[position]
 
-        holder.newsTitle.setText(currentNews.Title)
-        holder.newsDate.setText(currentNews.date)
+        holder.newsTitle.text = currentNews.Title
+        holder.newsDate.text = currentNews.date
         holder.newsImg.setImageResource(currentNews.Img)
     }
 
