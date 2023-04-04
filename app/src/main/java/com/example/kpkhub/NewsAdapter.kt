@@ -34,7 +34,6 @@ class NewsAdapter(private val newsList: ArrayList<News>) : RecyclerView.Adapter<
         val newsDate : TextView = itemView.findViewById(R.id.date)
         val newsImg : ImageView = itemView.findViewById(R.id.img)
 
-        //= itemView.findViewById(R.id.btn)
 
     }
 
