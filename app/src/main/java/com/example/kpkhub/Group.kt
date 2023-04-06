@@ -1,4 +1,3 @@
 package com.example.kpkhub
 
-class Lessons {
-}
+class Group (var Lessons: String)

@@ -8,25 +8,19 @@ import androidx.recyclerview.widget.RecyclerView
 class AboutActivity : AppCompatActivity() {
     private  lateinit var aboutRecyclerView: RecyclerView
     private  lateinit var aboutArrayList: ArrayList<About>
-    lateinit var aboutTitle: Array<String>
-    lateinit var aboutDesc: Array<String>
-    lateinit var titleHistory: Array<String>
-    lateinit var historyCollage: Array<String>
+    lateinit var aboutTitle: String
+    lateinit var aboutDesc: String
+    lateinit var titleHistory: String
+    lateinit var historyCollage: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_about)
 
-        aboutTitle = arrayOf(
-            "Про коледж"
-        )
-        aboutDesc = arrayOf(
-            "Коломийський політехнічний фаховий коледж Національного університету «Львівська політехніка» - сучасний вищий навчальний заклад, один з найстаріших закладів освіти на Прикарпатті."
-        )
-        titleHistory = arrayOf(
-            "Наша історі"
-        )
-        historyCollage = arrayOf(
+        aboutTitle = "Про коледж"
+        aboutDesc = "Коломийський політехнічний фаховий коледж Національного університету «Львівська політехніка» - сучасний вищий навчальний заклад, один з найстаріших закладів освіти на Прикарпатті."
+        titleHistory = "Наша історі"
+        historyCollage =
             "\n" +
                     "Коломийський політехнічний фаховий коледж бере свій початок від дев’яностих років позаминулого століття, від часу, коли в Коломиї були закладені основи школи деревного промислу. Австрійський уряд своєю постановою від 15 листопада 1894 року дав їй офіційну назву “Цісарсько-королівська фахова школа деревного промислу”. Навчальний заклад, що взяв в основу своєї програми багаті традиції гуцульського деревного мистецтва, мав чотири фахові відділи: різьба фігурна і орнаментальна, столярство будівельне і меблеве, токарство по дереву, а також теслярство.\n" +
                     "Починаючи з 1939 року школа була переведена в розряд фабрично-фахових і готувала в основному робітників з механічної обробки деревини, столярів і опоряджувальників.\n" +
@@ -35,7 +29,7 @@ class AboutActivity : AppCompatActivity() {
                     "Наказом Міністерства деревообробної промисловості УРСР від 16.05.1991 року №32/120 Коломийський технікум механічної обробки деревини реорганізовано в Коломийський механіко-технологічний коледж.\n" +
                     "Згідно наказу Міністерства освіти і науки України від 17.05.2000 року №139 Коломийський механіко-технологічний коледж перейменовано в Коломийський політехнічний коледж, враховуючи те, що здійснюючи підготовку фахівців з різних напрямків і спеціальностей, назва механіко-технологічний коледж вже не відображала реальних напрямків підготовки фахівців.\n" +
                     "Відповідно до наказу Міністерства освіти і науки України від 22.01.2010 року № 33 створено відокремлений структурний підрозділ Коломийський політехнічний коледж Національного університету «Львівська політехніка»."
-        )
+
 
         aboutRecyclerView = findViewById(R.id.rcAbout)
         aboutRecyclerView.layoutManager = LinearLayoutManager(this)
@@ -46,6 +40,10 @@ class AboutActivity : AppCompatActivity() {
     }
     private fun setNewsdata(){
         aboutRecyclerView.adapter = AboutAdapter(aboutArrayList)
+
+        val about = About( aboutTitle,aboutDesc,titleHistory, historyCollage)
+        aboutArrayList.add(about)
+
     }
 
 

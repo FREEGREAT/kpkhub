@@ -134,7 +134,7 @@ class Home : Fragment() {
             override fun onBtnClick(position: Int) {
                 when (position){
                     0->{
-                        val intent = Intent(requireActivity(), NewsActivity::class.java)
+                        val intent = Intent(requireActivity(), LessonsActivity::class.java)
                         startActivity(intent)
                     }
                     1->{

@@ -52,8 +52,7 @@ class MyAdapter(private  val btnList: ArrayList<Btn>): RecyclerView.Adapter<MyAd
         val btnName : Button = itemView.findViewById(R.id.btn)
 
         init {
-            btnName.setOnClickListener{
-
+                btnName.setOnClickListener{
                 listener.onBtnClick(adapterPosition)
 
             }
