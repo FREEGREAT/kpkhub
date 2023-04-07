@@ -15,6 +15,12 @@
         android:theme="@style/Theme.KPKhub"
         tools:targetApi="31">
         <activity
+            android:name=".P42Activity"
+            android:exported="false" />
+        <activity
+            android:name=".P41Activity"
+            android:exported="false" />
+        <activity
             android:name=".BellsActivity"
             android:exported="false"
             android:label="@string/title_activity_bells"
