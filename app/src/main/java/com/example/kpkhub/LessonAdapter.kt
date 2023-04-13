@@ -3,15 +3,16 @@ package com.example.kpkhub
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class LessonAdapter(private val groupList: ArrayList<Lesson>, val listener: LessonsActivity) : RecyclerView.Adapter<LessonAdapter.LessonViewHolder>() {
     inner class LessonViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        val gName : TextView = itemView.findViewById(R.id.nameGroup)
+        val gName : Button = itemView.findViewById(R.id.nameGroup)
 
         init {
-            itemView.setOnClickListener{
+            gName.setOnClickListener{
                 val position = adapterPosition
                 listener.onClick(position)
             }
@@ -28,7 +29,7 @@ class LessonAdapter(private val groupList: ArrayList<Lesson>, val listener: Less
     }
 
     override fun onBindViewHolder(holder: LessonViewHolder, position: Int) {
-        holder.gName.text = groupList[position].groupName
+        holder.gName.setText(groupList[position].groupName)
     }
     interface LessonClickListener{
         fun onClick(position: Int)

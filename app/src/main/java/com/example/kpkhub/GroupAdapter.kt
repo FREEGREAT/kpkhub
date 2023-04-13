@@ -39,7 +39,7 @@ class GroupAdapter (private val gList: ArrayList<Group>): RecyclerView.Adapter<G
     }
 
     class MyGroupHolder(gView: View) : RecyclerView.ViewHolder(gView){
-        val gName : Button = itemView.findViewById(R.id.gButton)
+        val gName : Button = itemView.findViewById(R.id.nameGroup)
 
         }
     }

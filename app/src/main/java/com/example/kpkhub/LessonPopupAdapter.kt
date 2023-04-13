@@ -1,5 +1,6 @@
 package com.example.kpkhub
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 
 class LessonPopupAdapter(private val groupPopupList: ArrayList<String>) :
     RecyclerView.Adapter<LessonPopupAdapter.GroupPopupViewHolder>() {
+
+    private val mTextColor = 212121;
 
     class GroupPopupViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val subject: TextView = itemView.findViewById(R.id.subject)
@@ -24,6 +27,7 @@ class LessonPopupAdapter(private val groupPopupList: ArrayList<String>) :
         return groupPopupList.size
     }
 
+    @SuppressLint("ResourceAsColor")
     override fun onBindViewHolder(holder: GroupPopupViewHolder, position: Int) {
         holder.subject.text = groupPopupList[position]
 //        holder.day.text = groupPopupList[position]

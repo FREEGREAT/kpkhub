@@ -31,7 +31,7 @@ class LessonsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_lessons)
 
         recyclerView = findViewById(R.id.groupRecyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView .setLayoutManager(GridLayoutManager(this, 2))
 
         groupList = arrayListOf()
 

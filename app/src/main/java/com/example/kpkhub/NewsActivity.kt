@@ -19,13 +19,13 @@ class NewsActivity : AppCompatActivity() {
 
         newsImg = arrayOf(
             R.drawable.news1,
+            R.drawable.news2,
+            R.drawable.news3,
+            R.drawable.news4,
+            R.drawable.news5,
             R.drawable.news6,
-            R.drawable.news6,
-            R.drawable.news6,
-            R.drawable.news6,
-            R.drawable.news6,
-            R.drawable.news6,
-            R.drawable.news6,
+            R.drawable.news7,
+            R.drawable.news8,
             )
         newsTitle = arrayOf(
             getString(R.string.nTitle1),
