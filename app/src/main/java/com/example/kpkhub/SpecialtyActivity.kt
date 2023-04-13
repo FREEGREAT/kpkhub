@@ -207,10 +207,6 @@ class SpecialtyActivity : AppCompatActivity() {
             }
         })
 
-        val exit = findViewById<Button>(R.id.exit)
-        exit.setOnClickListener {
-            finish()
-        }
 
     }
     private fun setupIndicators(){

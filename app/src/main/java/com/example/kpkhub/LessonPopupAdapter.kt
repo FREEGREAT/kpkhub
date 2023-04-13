@@ -30,6 +30,6 @@ class LessonPopupAdapter(private val groupPopupList: ArrayList<String>) :
     @SuppressLint("ResourceAsColor")
     override fun onBindViewHolder(holder: GroupPopupViewHolder, position: Int) {
         holder.subject.text = groupPopupList[position]
-//        holder.day.text = groupPopupList[position]
+//        holder.day.text = day
     }
 }

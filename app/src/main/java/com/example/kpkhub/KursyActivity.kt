@@ -12,10 +12,6 @@ class KursyActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kursy)
-        val exit = findViewById<Button>(R.id.exitKursy)
-        exit.setOnClickListener {
-            finish()
-        }
         val openSignIn = findViewById<Button>(R.id.signInKursy)
         openSignIn.setOnClickListener {
             val intent = Intent(this, SignInActivity::class.java)

@@ -15,11 +15,6 @@ class BuyActivity : AppCompatActivity()  {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buy)
 
-        val exit = findViewById<Button>(R.id.exit)
-        exit.setOnClickListener {
-            finish()
-        }
-
         val kitsanyuk = findViewById<TextView>(R.id.urlKitsanyuk)
         val kuryshchuk = findViewById<TextView>(R.id.urlKuryshchuk)
         val dmitrenko = findViewById<TextView>(R.id.urlDmitrenko)

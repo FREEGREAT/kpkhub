@@ -6,14 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".KursyActivity">
 
-    <Button
-        android:id="@+id/exitKursy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/baseline_keyboard_double_arrow_left_24"
-        android:backgroundTint="#1C1B1F"
-        tools:ignore="MissingConstraints"
-        />
     <TextView
         android:id="@+id/kursyTitle"
         android:layout_width="match_parent"
@@ -21,7 +13,7 @@
         android:text="Підготовчі курси 2023"
         android:textSize="40sp"
         tools:ignore="MissingConstraints"
-        android:gravity="right"
+        android:gravity="center"
         android:layout_marginLeft="58dp"
         android:layout_marginRight="48dp"
         android:layout_marginTop="20dp"

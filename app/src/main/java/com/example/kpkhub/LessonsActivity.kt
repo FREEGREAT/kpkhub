@@ -30,8 +30,14 @@ class LessonsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lessons)
 
+        val openAllShedule = findViewById<Button>(R.id.openAllSchedulePdf)
+        openAllShedule.setOnClickListener{
+            val intent = Intent(this, allShedulePdf::class.java)
+            startActivity(intent)
+        }
+
         recyclerView = findViewById(R.id.groupRecyclerView)
-        recyclerView .setLayoutManager(GridLayoutManager(this, 2))
+        recyclerView.layoutManager = GridLayoutManager(this, 2)
 
         groupList = arrayListOf()
 
@@ -74,12 +80,11 @@ class LessonsActivity : AppCompatActivity() {
 
         db.collection("groups").document(group).collection(
             SimpleDateFormat("EEEE", Locale.ENGLISH).format(
-                Date().time
-            ))
-            .document("subjects").get().addOnSuccessListener {
-//                recyclerView.adapter = LessonPopupAdapter((it.data?.get("day") as string))
-              recyclerView.adapter = LessonPopupAdapter((it.data?.get("subject") as ArrayList<String>))
+                Date().time)).document("subjects").get().addOnSuccessListener {
+//                recyclerView.adapter = LessonPopupAdapter(it.data?.get("day"))
+                recyclerView.adapter = LessonPopupAdapter((it.data?.get("subject") as ArrayList<String>))
             }
+
 
             .addOnFailureListener{
                 Toast.makeText(this, it.toString(), Toast.LENGTH_SHORT).show()
