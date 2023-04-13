@@ -10,5 +10,13 @@ class KompanyActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_kompany)
 
+        val openPdf: Button = findViewById(R.id.openPdf)
+        openPdf.setOnClickListener{
+            val intent = Intent(this, OpenPDFKompany::class.java)
+            startActivity(intent)
+        }
     }
+
+
+
 }

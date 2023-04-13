@@ -1,28 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     tools:context=".KompanyActivity">
-
-    <Button
-        android:id="@+id/exit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/baseline_keyboard_double_arrow_left_24"
-        android:backgroundTint="#1C1B1F"
-        tools:ignore="MissingConstraints"
-        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:orientation="vertical">
-<!--    <ScrollView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content">-->
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -50,17 +38,23 @@
             android:src="@drawable/horisontalline"
             android:layout_marginTop="40dp"
             />
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="10dp"-->
-<!--            android:text="- 14 липня 2022 року розпочато подання заяв для вступників на основі повної загальної середньої освіти (11-ти класів) та диплома кваліфікованого робітника!-->
-
-<!--                - Такі вступники можуть подавати заяви: до 5 серпня (18.00) - для вступу за індивідуальною усною співбесідою; до 31 серпня (18.00) - для вступу за результатами НМТ(ЗНО).-->
-<!--                - Інструкція щодо роботи з системою подання заяв в електронній формі-->
-<!--                - https://vstup.edbo.gov.ua/files/Instrukciya_EK_FPO_BZSO_2022.pdf-->
-<!--                - Консультаційну допомогу у створенні електронних кабінетів абітурієнтам надає коледж."/>-->
-<!--        </ScrollView>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/kompany_text_1"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/kompany_text_2"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/kompany_text_3"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/kompany_text_4"
+            />
     </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

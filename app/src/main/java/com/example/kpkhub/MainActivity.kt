@@ -33,7 +33,9 @@ class MainActivity : AppCompatActivity() {
                 R.id.virtualLink -> {
                     replaceFragment(VirtualLink()){}
                 }
-                R.id.shedule -> {showSheduleDialod()}
+                R.id.shedule -> {
+                    showSheduleDialod()
+                }
                 else ->{
 
                 }
@@ -43,24 +45,13 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigationView.selectedItemId = R.id.home
 
     }
-    private fun showSheduleDialod(){
+    private fun showSheduleDialod() {
         val builder = AlertDialog.Builder(this)
         val customView = LayoutInflater.from(this).inflate(R.layout.fragment_shedule, null)
         builder.setView(customView)
 
         val dialog = builder.create()
         dialog.show()
-        val lesson = findViewById<Button>(R.id.lesson)
-        val bells = findViewById<Button>(R.id.bells)
-
-//        lesson.setOnClickListener {
-//            val intent = Intent(this, LessonsActivity::class.java)
-//            startActivity(intent)
-//        }
-//        bells.setOnClickListener {
-//            val intent = Intent(this, BellsActivity::class.java)
-//            startActivity(intent)
-//        }
 
         val lp = WindowManager.LayoutParams()
         lp.copyFrom(dialog.window?.attributes)
@@ -70,8 +61,17 @@ class MainActivity : AppCompatActivity() {
         lp.y = 800;
         dialog.window?.attributes = lp
 
+        val lesson = customView.findViewById<Button>(R.id.lesson)
+        val bells = customView.findViewById<Button>(R.id.bells)
 
-
+        lesson.setOnClickListener {
+            val intent = Intent(this, LessonsActivity::class.java)
+            startActivity(intent)
+        }
+        bells.setOnClickListener {
+            val intent = Intent(this, BellsSchedule::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun replaceFragment(fragment: Fragment, function: () -> Unit){

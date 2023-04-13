@@ -15,16 +15,11 @@
         android:theme="@style/Theme.KPKhub"
         tools:targetApi="31">
         <activity
-            android:name=".P42Activity"
+            android:name=".BellsSchedule"
             android:exported="false" />
         <activity
-            android:name=".P41Activity"
+            android:name=".OpenPDFKompany"
             android:exported="false" />
-        <activity
-            android:name=".BellsActivity"
-            android:exported="false"
-            android:label="@string/title_activity_bells"
-            android:theme="@style/Theme.KPKhub.NoActionBar" />
         <activity
             android:name=".LessonsActivity"
             android:exported="false" />
