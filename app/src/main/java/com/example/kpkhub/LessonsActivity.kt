@@ -22,6 +22,7 @@ import kotlin.collections.ArrayList
 class LessonsActivity : AppCompatActivity() {
     private  lateinit var recyclerView: RecyclerView
     private lateinit var groupList: ArrayList<Lesson>
+    private lateinit var groupPopupList: ArrayList<LessonPopup>
     private var db = Firebase.firestore
 
     @SuppressLint("MissingInflatedId")
@@ -67,7 +68,6 @@ class LessonsActivity : AppCompatActivity() {
 
         val popupTeacher = builder.create()
         popupTeacher.show()
-
         recyclerView = customViewGroup.findViewById(R.id.groupPopupRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
         db = FirebaseFirestore.getInstance()
@@ -77,7 +77,8 @@ class LessonsActivity : AppCompatActivity() {
                 Date().time
             ))
             .document("subjects").get().addOnSuccessListener {
-                recyclerView.adapter = LessonPopupAdapter((it.data?.get("subject") as ArrayList<String>))
+//                recyclerView.adapter = LessonPopupAdapter((it.data?.get("day") as string))
+              recyclerView.adapter = LessonPopupAdapter((it.data?.get("subject") as ArrayList<String>))
             }
 
             .addOnFailureListener{

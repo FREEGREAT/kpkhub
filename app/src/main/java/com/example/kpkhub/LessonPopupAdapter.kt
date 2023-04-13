@@ -11,6 +11,7 @@ class LessonPopupAdapter(private val groupPopupList: ArrayList<String>) :
 
     class GroupPopupViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val subject: TextView = itemView.findViewById(R.id.subject)
+//        val day: TextView = itemView.findViewById(R.id.day)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GroupPopupViewHolder {
@@ -25,6 +26,6 @@ class LessonPopupAdapter(private val groupPopupList: ArrayList<String>) :
 
     override fun onBindViewHolder(holder: GroupPopupViewHolder, position: Int) {
         holder.subject.text = groupPopupList[position]
-
+//        holder.day.text = groupPopupList[position]
     }
 }
