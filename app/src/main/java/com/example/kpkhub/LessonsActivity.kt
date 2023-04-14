@@ -24,6 +24,8 @@ class LessonsActivity : AppCompatActivity() {
     private lateinit var groupList: ArrayList<Lesson>
     private lateinit var groupPopupList: ArrayList<LessonPopup>
     private var db = Firebase.firestore
+    lateinit var g : String
+    lateinit var fSchedule : Button
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -61,8 +63,16 @@ class LessonsActivity : AppCompatActivity() {
     }
      fun onClick(position: Int) {
         when(position){
-            0 -> showPopupGroups("P-41")
-            1 -> showPopupGroups("P-42")
+            0 ->
+            {
+                showPopupGroups("P-41")
+                g = "p41"
+            }
+            1 ->
+            {
+                showPopupGroups("P-42")
+                g = "p42"
+            }
         }
     }
 
@@ -89,6 +99,13 @@ class LessonsActivity : AppCompatActivity() {
             .addOnFailureListener{
                 Toast.makeText(this, it.toString(), Toast.LENGTH_SHORT).show()
             }
+
+        fSchedule = customViewGroup.findViewById(R.id.fSchedule)
+        fSchedule.setOnClickListener {
+            var intent = Intent(this, GroupScheduleActivity::class.java)
+            intent.putExtra("root", g)
+            startActivity(intent)
+        }
 
     }
 }
