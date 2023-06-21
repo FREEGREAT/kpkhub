@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Button" parent="Widget.MaterialComponents.Button.OutlinedButton">
+
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="GroupBtn" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="background">@color/dark_gray</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="SheduleBtn" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="background">@color/dark_gray</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+</resources>

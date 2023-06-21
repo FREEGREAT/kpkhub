@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/virtualLink"
+        android:icon="@drawable/earth"
+        android:title="Віртуальне середовише"
+        android:layout_width="50dp"
+        />
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/logo"
+        android:title="Головна"/>
+    <item
+        android:id="@+id/shedule"
+        android:icon="@drawable/baseline_filter_none_24"
+        android:title="Розклaд">
+
+  
+
+    </item>
+
+
+
+</menu>
