@@ -1,5 +1,6 @@
 package com.example.kpkhub
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -135,23 +136,29 @@ class Home : Fragment() {
                 when (position){
                     0->{
                         val intent = Intent(requireActivity(), NewsActivity::class.java)
-                        startActivity(intent)
+                        var b = ActivityOptions.makeSceneTransitionAnimation(requireActivity()).toBundle()
+                        startActivity(intent, b);
+
                     }
                     1->{
                         val intent = Intent(requireActivity(), SpecialtyActivity::class.java)
-                        startActivity(intent)
+                        var anim = ActivityOptions.makeSceneTransitionAnimation(requireActivity()).toBundle()
+                        startActivity(intent, anim)
                     }
                     2->{
                         val intent = Intent(requireActivity(), KursyActivity::class.java)
-                        startActivity(intent)
+                        var anim = ActivityOptions.makeSceneTransitionAnimation(requireActivity()).toBundle()
+                        startActivity(intent, anim)
                     }
                     3->{
                         val intent = Intent(requireActivity(), KompanyActivity::class.java)
-                        startActivity(intent)
+                        var anim = ActivityOptions.makeSceneTransitionAnimation(requireActivity()).toBundle()
+                        startActivity(intent, anim)
                     }
                     4->{
                         val intent = Intent(requireActivity(), AboutActivity::class.java)
-                        startActivity(intent)
+                        var anim = ActivityOptions.makeSceneTransitionAnimation(requireActivity()).toBundle()
+                        startActivity(intent, anim)
                     }
                 }
             }
