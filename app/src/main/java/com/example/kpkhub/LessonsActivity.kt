@@ -65,7 +65,7 @@ class LessonsActivity : AppCompatActivity() {
         when(position){
             0 ->
             {
-                showPopupGroups("P-31")
+                showPopupGroups("p31")
                 g = "p31"
             }
             1 ->
@@ -87,7 +87,7 @@ class LessonsActivity : AppCompatActivity() {
     }
 
     @SuppressLint("MissingInflatedId")
-    private fun showPopupGroups(group:String) {
+    private fun showPopupGroups(q:String) {
         val builder = AlertDialog.Builder(this)
         val customViewGroup = LayoutInflater.from(this).inflate(R.layout.popup_lesson, null)
         builder.setView(customViewGroup)
@@ -100,16 +100,19 @@ class LessonsActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         db = FirebaseFirestore.getInstance()
 
-        db.collection("kpfk").document("lessons").collection("subjects").document(group)
-            .collection("weeks")
+//        db.collection("kpfk").document("lessons").collection("subjects").document(group)
+//            .collection("weeks")
+                db.collection("kpfk/lessons/subjects/" + q + "/weeks")
             .document(
             SimpleDateFormat("EEEE", Locale.ENGLISH).format(Date().time))
             .get().addOnSuccessListener {
-                    val lesson: LessonPopup? = it.toObject(LessonPopup::class.java)
-                    if (lesson != null) {
-                        groupPopupList.add(lesson)
-                    }
-            recyclerView.adapter = LessonPopupAdapter(groupPopupList)
+
+                        val lesson: LessonPopup? = it.toObject(LessonPopup::class.java)
+                        if (lesson != null) {
+                            groupPopupList.add(lesson)
+
+                    recyclerView.adapter = LessonPopupAdapter(groupPopupList)
+                }
         }
 
             .addOnFailureListener{

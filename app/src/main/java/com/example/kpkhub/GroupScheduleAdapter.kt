@@ -17,12 +17,12 @@ class GroupScheduleAdapter (private val user: ArrayList<User>) : RecyclerView.Ad
         val currentItem = user[position]
 
 //        holder.day.text = currentItem.day
-        holder.firstLsn.text = currentItem.firstLsn
-        holder.secondLsn.text = currentItem.secondLsn
-        holder.thirdLsn.text = currentItem.thirdLsn
-        holder.fourthLsn.text = currentItem.fourthLsn
-        holder.fifthLsn.text = currentItem.fifthLsn
-        holder.sixthLsn.text = currentItem.sixthLsn
+        holder.firstLsn.text = currentItem.subj1
+        holder.secondLsn.text = currentItem.subj2
+        holder.thirdLsn.text = currentItem.subj3
+        holder.fourthLsn.text = currentItem.subj4
+        holder.fifthLsn.text = currentItem.subj5
+        holder.sixthLsn.text = currentItem.subj6
     }
 
     override fun getItemCount(): Int {

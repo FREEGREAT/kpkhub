@@ -27,7 +27,7 @@ class GroupScheduleActivity : AppCompatActivity() {
 
         db = FirebaseFirestore.getInstance()
 
-        db.collection(root).get().addOnSuccessListener {
+        db.collection("kpfk/lessons/subjects/" + root + "/weeks").get().addOnSuccessListener {
             if (!it.isEmpty) {
                 for (data in it.documents) {
                     val user: User? = data.toObject(User::class.java)
