@@ -29,7 +29,7 @@ class LessonAdapter(private val groupList: ArrayList<Lesson>, val listener: Less
     }
 
     override fun onBindViewHolder(holder: LessonViewHolder, position: Int) {
-        holder.gName.setText(groupList[position].groupName)
+        holder.gName.text = groupList[position].groupName
     }
     interface LessonClickListener{
         fun onClick(position: Int)

@@ -18,7 +18,6 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
-
 class LessonsActivity : AppCompatActivity() {
     private  lateinit var recyclerView: RecyclerView
     private lateinit var groupList: ArrayList<Lesson>
@@ -45,11 +44,12 @@ class LessonsActivity : AppCompatActivity() {
 
         db = FirebaseFirestore.getInstance()
 
-        db.collection("Groups").get().addOnSuccessListener {
+        db.collection("kpfk").document("lessons").collection("subjects").get().addOnSuccessListener {
             if(!it.isEmpty){
                 for(data in it.documents){
                     val group:Lesson? = data.toObject(Lesson::class.java)
                     if (group != null) {
+                        group.groupName = data.id
                         groupList.add(group)
                     }
                 }
@@ -65,10 +65,20 @@ class LessonsActivity : AppCompatActivity() {
         when(position){
             0 ->
             {
+                showPopupGroups("P-31")
+                g = "p31"
+            }
+            1 ->
+            {
+                showPopupGroups("P-32")
+                g = "p32"
+            }
+            2 ->
+            {
                 showPopupGroups("P-41")
                 g = "p41"
             }
-            1 ->
+            3 ->
             {
                 showPopupGroups("P-42")
                 g = "p42"
@@ -77,10 +87,12 @@ class LessonsActivity : AppCompatActivity() {
     }
 
     @SuppressLint("MissingInflatedId")
-    private fun showPopupGroups(group:String){
+    private fun showPopupGroups(group:String) {
         val builder = AlertDialog.Builder(this)
         val customViewGroup = LayoutInflater.from(this).inflate(R.layout.popup_lesson, null)
         builder.setView(customViewGroup)
+
+        groupPopupList = arrayListOf()
 
         val popupTeacher = builder.create()
         popupTeacher.show()
@@ -88,13 +100,17 @@ class LessonsActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         db = FirebaseFirestore.getInstance()
 
-        db.collection("groups").document(group).collection(
-            SimpleDateFormat("EEEE", Locale.ENGLISH).format(
-                Date().time)).document("subjects").get().addOnSuccessListener {
-//                recyclerView.adapter = LessonPopupAdapter(it.data?.get("day"))
-                recyclerView.adapter = LessonPopupAdapter((it.data?.get("subject") as ArrayList<String>))
-            }
-
+        db.collection("kpfk").document("lessons").collection("subjects").document(group)
+            .collection("weeks")
+            .document(
+            SimpleDateFormat("EEEE", Locale.ENGLISH).format(Date().time))
+            .get().addOnSuccessListener {
+                    val lesson: LessonPopup? = it.toObject(LessonPopup::class.java)
+                    if (lesson != null) {
+                        groupPopupList.add(lesson)
+                    }
+            recyclerView.adapter = LessonPopupAdapter(groupPopupList)
+        }
 
             .addOnFailureListener{
                 Toast.makeText(this, it.toString(), Toast.LENGTH_SHORT).show()

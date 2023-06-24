@@ -48,7 +48,7 @@
 
 
             <TextView
-                android:id="@+id/tvfirstlsn"
+                android:id="@+id/subj1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -74,7 +74,7 @@
 
 
             <TextView
-                android:id="@+id/tvsecondlsn"
+                android:id="@+id/subj2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -100,7 +100,7 @@
 
 
             <TextView
-                android:id="@+id/tvthirdlsn"
+                android:id="@+id/subj3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -126,7 +126,7 @@
 
 
             <TextView
-                android:id="@+id/tvfourthlsn"
+                android:id="@+id/subj4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -151,7 +151,7 @@
 
 
             <TextView
-                android:id="@+id/tvfifthlsn"
+                android:id="@+id/subj5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -177,7 +177,7 @@
 
 
             <TextView
-                android:id="@+id/tvsixthlsn"
+                android:id="@+id/subj6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"

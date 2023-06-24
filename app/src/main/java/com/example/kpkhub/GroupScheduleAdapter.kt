@@ -16,7 +16,7 @@ class GroupScheduleAdapter (private val user: ArrayList<User>) : RecyclerView.Ad
     override fun onBindViewHolder(holder: GroupScheduleAdapter.MyViewHolder, position: Int) {
         val currentItem = user[position]
 
-        holder.day.text = currentItem.day
+//        holder.day.text = currentItem.day
         holder.firstLsn.text = currentItem.firstLsn
         holder.secondLsn.text = currentItem.secondLsn
         holder.thirdLsn.text = currentItem.thirdLsn
@@ -31,13 +31,13 @@ class GroupScheduleAdapter (private val user: ArrayList<User>) : RecyclerView.Ad
 
     public class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
 
-        val day : TextView = itemView.findViewById(R.id.tvday)
-        val firstLsn : TextView = itemView.findViewById(R.id.tvfirstlsn)
-        val secondLsn : TextView = itemView.findViewById(R.id.tvsecondlsn)
-        val thirdLsn : TextView = itemView.findViewById(R.id.tvthirdlsn)
-        val fourthLsn : TextView = itemView.findViewById(R.id.tvfourthlsn)
-        val fifthLsn : TextView = itemView.findViewById(R.id.tvfifthlsn)
-        val sixthLsn : TextView = itemView.findViewById(R.id.tvsixthlsn)
+//        val day : TextView = itemView.findViewById(R.id.tvday)
+        val firstLsn : TextView = itemView.findViewById(R.id.subj1)
+        val secondLsn : TextView = itemView.findViewById(R.id.subj2)
+        val thirdLsn : TextView = itemView.findViewById(R.id.subj3)
+        val fourthLsn : TextView = itemView.findViewById(R.id.subj4)
+        val fifthLsn : TextView = itemView.findViewById(R.id.subj5)
+        val sixthLsn : TextView = itemView.findViewById(R.id.subj6)
     }
 
 }

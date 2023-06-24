@@ -5,7 +5,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
     <TextView
-        android:id="@+id/subject"
+        android:id="@+id/subj1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:text="piucdgviuefvка"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/subj2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:text="piucdgviuefvка"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/subj3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:text="piucdgviuefvка"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/subj4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:text="piucdgviuefvка"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/subj5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:text="piucdgviuefvка"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/subj6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
