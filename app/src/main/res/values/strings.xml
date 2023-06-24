@@ -55,7 +55,6 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
-
     <!--    ABOUT         -->
     <string name="about_main_desc">Коломийський політехнічний фаховий коледж Національного університету «Львівська політехніка» - сучасний вищий навчальний заклад, один з найстаріших закладів освіти на Прикарпатті.</string>
     <string name="history_desc">
