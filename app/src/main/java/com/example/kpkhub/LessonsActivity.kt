@@ -86,7 +86,7 @@ class LessonsActivity : AppCompatActivity() {
         }
     }
 
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint("MissingInflatedId", "SuspiciousIndentation")
     private fun showPopupGroups(q:String) {
         val builder = AlertDialog.Builder(this)
         val customViewGroup = LayoutInflater.from(this).inflate(R.layout.popup_lesson, null)
